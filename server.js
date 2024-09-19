@@ -40,7 +40,7 @@ app.get('/tarefas', (req, res) => {
 app.put('/tarefas/:id', (req, res) => {
     const { id } = req.params;
     const { tarefa } = req.body;
-    db.run("UPDATE tarefas SET tarefa = ? WHERE id = ?", [tarefa, id], function(err) {
+    db.run("UPDATE tarefas SET tarefa = ? WHERE id = ?", [tarefa, id], function (err) {
         if (err) {
             return res.status(500).json({ error: err.message });
         }
