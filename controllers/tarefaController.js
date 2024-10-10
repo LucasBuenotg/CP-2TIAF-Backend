@@ -1,6 +1,6 @@
-//controladores safadinhos
 
-const db = require('../db/atabase');
+
+const db = require('../db/database');
 
 exports.createTarefa = (req, res) => {
     const { tarefa } = req.body;
